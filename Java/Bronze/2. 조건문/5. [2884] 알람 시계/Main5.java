@@ -18,7 +18,6 @@ public class Main5 {
             }
         }
 
-        System.out.print(h + " ");
-        System.out.print(m);
+        System.out.print(h + " " + m);
     }
 }
