@@ -11,7 +11,7 @@ public class Main8 {
             String s = br.readLine();
             int a = Integer.parseInt(s.split(" ")[0]);
             int b = Integer.parseInt(s.split(" ")[1]);
-            bw.write(String.format("case #%d: %d + %d = %d\n", i, a, b, a+b));
+            bw.write(String.format("Case #%d: %d + %d = %d\n", i, a, b, a+b));
         }
         br.close();
         bw.flush();
