@@ -12,7 +12,7 @@ public class Main12 {
             st = new StringTokenizer(s, " ");
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-            bw.write((a + b) + "\n");;
+            bw.write((a + b) + "\n");
         }
         br.close();
         bw.flush();
