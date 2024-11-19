@@ -1,12 +1,12 @@
 import java.io.*;
 
-public class Main6 {
+public class Main6_1 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int cnt = 0;
         String cr[] = {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
-        String neword = "";
+        String neword;
 
         String s = br.readLine();
         for (int i = 0; i < s.length(); i++) {
