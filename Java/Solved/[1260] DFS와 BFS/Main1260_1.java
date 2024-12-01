@@ -4,7 +4,7 @@ import java.util.Queue;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Main1260_1 {
     static int n;
     static int m;
     static int v;

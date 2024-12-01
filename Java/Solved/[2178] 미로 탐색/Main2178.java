@@ -57,7 +57,7 @@ public class Main2178 {
         visited = new boolean[n][m];
 
         for (int i=0; i<n; i++) {
-            String s = new String(br.readLine());
+            String s = br.readLine();
             for (int j=0; j<s.length(); j++) {
                 ary[i][j] = s.charAt(j) - '0';
             }
