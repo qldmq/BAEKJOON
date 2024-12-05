@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 
 public class Main1697 {
     static int k;
-    static int visited_ary[] = new int[10001];
+    static int visited_ary[] = new int[100001];
 
     public static void BFS(int x) {
         Queue<Integer> queue = new LinkedList<>();
@@ -44,10 +44,10 @@ public class Main1697 {
         int n = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken());
 
-        for (int i = 0; i < visited_ary.length; i++) {
-            visited_ary[i] = 0; // 0으로 초기화
+        if (n == k) {
+            System.out.println(0);
+        } else {
+            BFS(n);
         }
-
-        BFS(n);
     }
 }
