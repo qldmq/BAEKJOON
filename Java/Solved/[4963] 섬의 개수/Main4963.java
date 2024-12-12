@@ -16,7 +16,7 @@ public class Main4963 {
             int xx = x + dx[i];
             int yy = y + dy[i];
 
-            if (xx>0 || yy>0 || xx<=w && yy<=h) {
+            if (xx>=0 && yy>=0 && xx<h && yy<w) {
                 if (ary[xx][yy]==1 && !visited_ary[xx][yy]) {
                     DFS(xx, yy);
                 }
@@ -47,9 +47,7 @@ public class Main4963 {
                     ary[i][j] = Integer.parseInt(str.nextToken());
                 }
             }
-
             
-
             for (int i=0; i<h; i++) {
                 for (int j=0; j<w; j++) {
                     if (ary[i][j]==1 && !visited_ary[i][j]) {
