@@ -49,5 +49,7 @@ public class Main1389 {
 				result = i;
 			}	
 		}
+
+        System.out.println(result + "\n");
     }
 }
