@@ -36,8 +36,10 @@ public class Main1389 {
 				}
 			}
 		}
+
 		int temp = INF;
 		int result = 0;
+		
 		for(int i=1;i<=n;i++) {
 			int total = 0;
 			for(int j=1;j<=n;j++) {
