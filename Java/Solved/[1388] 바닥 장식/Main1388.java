@@ -4,30 +4,34 @@ import java.util.StringTokenizer;
 public class Main1388 {
     static char ary[][];
     static boolean visited_ary[][];
-    static int dx[] = {1, -1, 0, 0};
-    static int dy[] = {0, 0, 1, -1};
     static int N, M;
     static int cnt = 0;
 
-    public static void DFS(int x, int y, char c) { 
+    public static void DFS(int x, int y) { 
         visited_ary[x][y] = true;
 
-        for (int i=0; i<4; i++) {
-            int xx = x + dx[i];
-            int yy = y + dy[i];
-            if (xx>=0 && yy>=0 && xx<N && yy<M) {
-                if (!visited_ary[xx][yy]) {
+        char c = ary[x][y];
 
-                    System.out.println("DFS 실행");
-                    char dd = ary[xx][yy];
-                    if (c==dd) {
-                        DFS(xx, yy, dd);
-                        System.out.println(dd);
-                    } else {
-                        cnt++;
-                        System.out.println("증가");
+        if (c == '-') {
+            for (int i=y+1; i<M; i++) {
+                if (ary[x][y] == ary[x][i]) {
+                    if (!visited_ary[x][i]) {
+                        DFS(x, i);
                     }
-                    visited_ary[xx][yy] = true;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        if (c == '|') {
+            for (int i=x+1; i<N; i++) {
+                if (ary[x][y] == ary[i][y]) {
+                    if (!visited_ary[i][y]) {
+                        DFS(i, y);
+                    }
+                } else {
+                    break;
                 }
             }
         }
@@ -51,16 +55,11 @@ public class Main1388 {
 
         for (int i=0; i<N; i++) {
             for (int j=0; j<M; j++) {
-                char c = ary[i][j];
-                DFS(i, j, c);
+                if (!visited_ary[i][j]) {
+                    DFS(i, j);
+                    cnt++;
+                }
             }
-        }
-
-        for (int i=0; i<N; i++) {
-            for (int j=0; j<M; j++) {
-                System.out.print(ary[i][j]);
-            }
-            System.out.println();
         }
 
         System.out.println(cnt);
